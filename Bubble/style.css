@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu+Mono&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:#222327;
+}
+.navigation{
+    position: relative;
+    width:400px;
+    height:60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.navigation ul{
+    position: relative;
+    display: flex;
+    width: 350px;
+}
+.navigation ul li{
+    list-style: none;
+    position: relative;
+    width: 70px;
+    height: 60px;
+    z-index: 2;
+}
+.navigation ul li a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+}
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    line-height: 60px;
+    font-size: 1.5em;
+    transition: 0.5s;
+    color:#222327;   
+}
+.navigation ul li.active a .icon
+{
+    color: #2196f3;
+    transform: translateY(-30px);
+}
+
+.navigation ul li a .text{
+    position: absolute;
+    background: #2196f3;
+    color: #fff;
+    padding: 2px 7px;
+    font-weight: 400;;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    border-radius: 12px;
+    transform: translateY(15px);
+    opacity: 0;
+}
+.navigation ul li.active a .text{
+    transform: translateY(-4px);
+    opacity: 1;
+}
+.indicator{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    top:-35%;
+    border-radius: 50%;
+    z-index: 1;
+    transition: 0.5s;
+}
+.indicator::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    top: 5px;
+    left: -20px;
+    border-radius: 50%;
+    box-shadow: 15px 18px #fff;
+}
+.indicator::after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    top: 5px;
+    left: 20px;
+    border-radius: 50%;
+    box-shadow: -15px 18px #fff;
+}
